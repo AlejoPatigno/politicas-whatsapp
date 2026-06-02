@@ -1,0 +1,152 @@
+:root {
+  --bg: #f6f8fb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.container {
+  width: min(920px, 92%);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  background: linear-gradient(135deg, #ffffff, #eef4ff);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.hero p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin: 18px 0;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 18px;
+  background: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.top-nav {
+  margin-bottom: 20px;
+}
+
+.top-nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+.document {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.document h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.15;
+}
+
+.document h2 {
+  margin-top: 34px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 1.35rem;
+}
+
+.document p,
+.document li {
+  font-size: 1rem;
+}
+
+.document a {
+  color: var(--primary);
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+footer {
+  color: var(--muted);
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 94%;
+    padding: 28px 0;
+  }
+
+  .hero,
+  .card,
+  .document {
+    padding: 24px;
+  }
+}
